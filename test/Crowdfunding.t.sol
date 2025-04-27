@@ -204,7 +204,7 @@ contract CrowdfundingTest is Test {
         vm.stopPrank();
     }
 
-   // Check total contributions after multiple contributions
+    // Check total contributions after multiple contributions
     function testGetMultipleTotalContributions() public {
         vm.deal(USER, 3e18);
         vm.startPrank(USER);
@@ -212,5 +212,5 @@ contract CrowdfundingTest is Test {
         crowdfunding.contribute{value: 2e18}();
         assertEq(crowdfunding.getTotalContributions(), 3e18);
         vm.stopPrank();
- }
+    }
 }
